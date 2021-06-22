@@ -8,8 +8,17 @@
 <body>
 <h1>My Super Fancy Spa</h1>
 <div id = "clientProfile">
+    <h2>My profile</h2>
+    <p th:text="${name}">Name</p>
+    <p th:text="${skintype}">Skin Type</p>
+    <p th:text="${manipedi}">Mani/Pedi</p>
 </div>
 <div id = "servicesMenu">
+    <table>
+        <th:block th:each="treatment : ${appropriateFacials}">
+        <tr th:text="${treatment}">Test Text</tr>
+        </th:block>
+    </table>
 </div>
 </body>
 </html>
